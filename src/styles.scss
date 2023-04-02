@@ -1,0 +1,18 @@
+@use "@angular/material" as mat;
+@use "./app/material/theme.scss" as mat-theme;
+
+@include mat.core();
+@include mat.all-component-themes(mat-theme.$theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  .mdc-tooltip {
+    font-size: 0.75rem;
+  }
+}

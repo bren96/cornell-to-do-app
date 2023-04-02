@@ -1,0 +1,35 @@
+<div>
+  <h3>My Tasks</h3>
+  <span>{{ date | date : "fullDate" }}</span>
+</div>
+
+<div>
+  <app-task-list
+    [tasks]="(activeTasks$ | async) ?? []"
+    (updateTask)="onUpdateTask($event)"
+    (deleteTask)="onDeleteTask($event)"
+  >
+  </app-task-list>
+  <app-add-task (addTask)="onAddTask($event)"></app-add-task>
+</div>
+
+<div>
+  <button
+    mat-button
+    class="expand-btn"
+    aria-label="Expand completed tasks"
+    (click)="toggleCompletedExpanded()"
+  >
+    <mat-icon>{{
+      completedExpanded ? "expand_more" : "chevron_right"
+    }}</mat-icon>
+    Completed ({{ completedTaskLength$ | async }})
+  </button>
+
+  <app-task-list
+    *ngIf="completedExpanded"
+    [tasks]="(completedTasks$ | async) ?? []"
+    (updateTask)="onUpdateTask($event)"
+    (deleteTask)="onDeleteTask($event)"
+  ></app-task-list>
+</div>

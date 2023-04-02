@@ -1,0 +1,17 @@
+.item-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .description {
+    flex-grow: 1;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.completed {
+      text-decoration: line-through;
+    }
+  }
+}

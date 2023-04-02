@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin-bottom: 1rem;
+  }
+
+  .no-tasks {
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+<mat-form-field appearance="outline" class="submit-task-field">
+  <mat-label>New Task</mat-label>
+  <mat-icon matPrefix> add </mat-icon>
+  <input
+    matInput
+    placeholder="Add a new task"
+    [formControl]="taskFormControl"
+    (keydown.enter)="submitNewTask()"
+  />
+  <button
+    matSuffix
+    mat-icon-button
+    matTooltip="Submit"
+    aria-label="Submit task"
+    [disabled]="!taskFormControl.value"
+    (click)="submitNewTask()"
+  >
+    <mat-icon>send</mat-icon>
+  </button>
+</mat-form-field>

@@ -1,0 +1,15 @@
+<mat-list>
+  <div *ngIf="tasks.length === 0" class="no-tasks">
+    <span> No Tasks </span>
+  </div>
+  <ng-container *ngFor="let task of tasks; index as i; trackBy: trackTasksById">
+    <mat-list-item>
+      <app-task-item
+        [task]="task"
+        (updateTask)="onUpdateTask($event)"
+        (deleteTask)="onDeleteTask($event)"
+      ></app-task-item>
+    </mat-list-item>
+    <mat-divider *ngIf="i !== tasks.length - 1"></mat-divider>
+  </ng-container>
+</mat-list>

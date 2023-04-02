@@ -1,0 +1,24 @@
+<div class="item-row">
+  <mat-checkbox
+    [matTooltip]="task.completed ? 'Mark as incomplete' : 'Mark as complete'"
+    [checked]="task.completed"
+    (change)="onCheckboxChange($event)"
+  ></mat-checkbox>
+
+  <span
+    [ngClass]="{
+      description: true,
+      completed: task.completed
+    }"
+    >{{ task.description }}
+  </span>
+
+  <button
+    mat-icon-button
+    matTooltip="Delete"
+    aria-label="Delete task"
+    (click)="onDeleteClick()"
+  >
+    <mat-icon>delete_outline</mat-icon>
+  </button>
+</div>
