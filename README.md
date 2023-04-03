@@ -1,6 +1,6 @@
 # Cornell To-Do App
 
-Minimal To-Do Application for use across any device. A user can create tasks, mark tasks as complete/incomplete, and delete tasks.
+Minimal To-Do Application for use across any device. A user can create tasks, mark tasks as complete/incomplete, and delete tasks. Follows [Material Design 2 Guidelines](https://m2.material.io/), with room for additional feature development.
 
 ![alt text](./screenshots/iPhoneSE.png)
 
@@ -11,10 +11,10 @@ Tech Used:
 - Angular CLI
 - Angular Material
 - Typescript
+- RxJS
 - SCSS
 - HTML
-- RxJS
-- Jasmine (unit testing)
+- Jasmine & Karma (unit testing)
 
 ## Installation
 
@@ -28,7 +28,7 @@ Install Project Dependencies
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. Source components and files located in `src/` directory.
 
 ## Build
 
